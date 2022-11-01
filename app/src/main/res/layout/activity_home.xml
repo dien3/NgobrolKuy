@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/gradient_drawable"
+    tools:context=".HomeActivity">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        >
+
+    <TextView
+        android:id="@+id/ngobrolTxt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Ngobrol"
+        android:textSize="18pt"
+        android:fontFamily="@font/redhatdisplay_regular"
+        android:textStyle="bold"
+        android:textColor="@color/white"
+        android:layout_margin="32dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
+
+    <ImageView
+        android:id="@+id/buttonmenu"
+        android:layout_width="60dp"
+        android:layout_height="wrap_content"
+        android:src="@drawable/menuputihvertical96"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="10dp"
+        />
+
+
+    <TextView
+        android:id="@+id/kuyTxt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_vertical"
+        android:text="Kuy"
+        android:textSize="18pt"
+        android:fontFamily="@font/redhatdisplay_regular"
+        android:textStyle="bold"
+        android:textColor="@color/pink"
+        app:layout_constraintStart_toEndOf="@id/ngobrolTxt"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginTop="32dp"
+        />
+
+    <LinearLayout
+        android:id="@+id/infochat"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintTop_toBottomOf="@id/kuyTxt"
+        android:layout_marginTop="32dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp">
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guideline2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="0.25"
+            />
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/civprofilePic"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:src="@drawable/profile_placeholder"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"/>
+
+        <TextView
+            android:id="@+id/infonama"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:fontFamily="@font/redhatdisplay_regular"
+            android:text="Username"
+            android:textColor="@color/white"
+            android:textSize="12pt"
+            android:textStyle="bold"
+            app:layout_constraintRight_toRightOf="@id/pesannya"
+            app:layout_constraintEnd_toStartOf="@id/guideline2"
+            />
+
+            <TextView
+                android:id="@+id/infoisichat"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="isichat"
+                android:textColor="@color/white"
+                android:textSize="10pt"
+                app:layout_constraintEnd_toStartOf="@+id/guideline2"
+                />
+
+    </LinearLayout>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+
+</ScrollView>

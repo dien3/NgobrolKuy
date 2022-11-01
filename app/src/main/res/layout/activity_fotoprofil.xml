@@ -5,10 +5,10 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/gradient_drawable"
-    tools:context=".ProfilePicActivity">
+    tools:context=".FotoprofilActivity">
 
     <ImageView
-        android:id="@+id/profilePic"
+        android:id="@+id/hasilprofilePic"
         android:layout_width="500px"
         android:layout_height="500px"
         android:src="@drawable/profile_placeholder"
@@ -18,28 +18,28 @@
         android:layout_marginTop="48dp"/>
 
     <ImageView
-        android:id="@+id/pinkCircle"
+        android:id="@+id/editpinkCircle"
         android:layout_width="120px"
         android:layout_height="120px"
         android:src="@drawable/circle"
-        app:layout_constraintEnd_toEndOf="@id/profilePic"
-        app:layout_constraintBottom_toBottomOf="@id/profilePic"/>
+        app:layout_constraintEnd_toEndOf="@id/hasilprofilePic"
+        app:layout_constraintBottom_toBottomOf="@id/hasilprofilePic"/>
 
     <ImageView
         android:layout_width="100px"
         android:layout_height="100px"
         android:src="@drawable/ic_baseline_edit_24"
-        app:layout_constraintStart_toStartOf="@id/pinkCircle"
-        app:layout_constraintEnd_toEndOf="@id/pinkCircle"
-        app:layout_constraintTop_toTopOf="@id/pinkCircle"
-        app:layout_constraintBottom_toBottomOf="@id/pinkCircle"/>
+        app:layout_constraintStart_toStartOf="@id/editpinkCircle"
+        app:layout_constraintEnd_toEndOf="@id/editpinkCircle"
+        app:layout_constraintTop_toTopOf="@id/editpinkCircle"
+        app:layout_constraintBottom_toBottomOf="@id/editpinkCircle"/>
 
     <ImageView
         android:layout_width="320px"
         android:layout_height="320px"
         android:src="@drawable/sparkle_logo"
-        app:layout_constraintTop_toTopOf="@id/profilePic"
-        app:layout_constraintStart_toStartOf="@id/profilePic"
+        app:layout_constraintTop_toTopOf="@id/hasilprofilePic"
+        app:layout_constraintStart_toStartOf="@id/hasilprofilePic"
         android:layout_marginTop="-24dp"
         android:layout_marginStart="-46dp"/>
 
@@ -57,26 +57,12 @@
         android:textStyle="bold"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/profilePic" />
+        app:layout_constraintTop_toBottomOf="@id/hasilprofilePic" />
 
-
-    <TextView
-        android:visibility="visible"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Lewati"
-        android:fontFamily="@font/redhatdisplay_regular"
-        android:textStyle="bold"
-        android:textSize="12pt"
-        android:textColor="@color/white"
-        android:layout_margin="32dp"
-        android:background="@drawable/rounded_outline"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"/>
 
     <androidx.cardview.widget.CardView
-        android:id="@+id/buttonlewati"
-        android:visibility="invisible"
+        android:id="@+id/buttonlanjut"
+        android:visibility="visible"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         app:cardCornerRadius="32dp"
@@ -99,5 +85,6 @@
             android:layout_marginBottom="8dp"/>
 
     </androidx.cardview.widget.CardView>
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>

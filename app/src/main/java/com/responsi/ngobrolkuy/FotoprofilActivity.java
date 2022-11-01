@@ -16,9 +16,9 @@ import android.widget.Toast;
 
 import java.io.IOException;
 
-public class ProfilePicActivity extends AppCompatActivity {
-    private ImageView ivprofil, iveditfoto;
-    private CardView cvbtnlewati;
+public class FotoprofilActivity extends AppCompatActivity {
+    private ImageView ivhasilprofil, iveditfotobaru;
+    private CardView cvbtnlanjut;
     private Uri imageUri;
 
     private static final String TAG = ProfilePicActivity.class.getCanonicalName();
@@ -27,13 +27,13 @@ public class ProfilePicActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_profile_pic);
+        setContentView(R.layout.activity_fotoprofil);
 
-        ivprofil= findViewById(R.id.profilePic);
-        iveditfoto= findViewById(R.id.pinkCircle);
-        cvbtnlewati= findViewById(R.id.buttonlewati);
+        ivhasilprofil= findViewById(R.id.hasilprofilePic);
+        iveditfotobaru= findViewById(R.id.editpinkCircle);
+        cvbtnlanjut= findViewById(R.id.buttonlewati);
 
-        iveditfoto.setOnClickListener(new View.OnClickListener() {
+        iveditfotobaru.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 Intent intent = new Intent(Intent.ACTION_PICK, MediaStore.Images.Media.EXTERNAL_CONTENT_URI);
@@ -41,10 +41,10 @@ public class ProfilePicActivity extends AppCompatActivity {
             }
         });
 
-        cvbtnlewati.setOnClickListener(new View.OnClickListener() {
+        cvbtnlanjut.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent pindah = new Intent(ProfilePicActivity.this, HomeActivity.class);
+                Intent pindah = new Intent(FotoprofilActivity.this, HomeActivity.class);
                 startActivity(pindah);
             }
         });
@@ -63,7 +63,7 @@ public class ProfilePicActivity extends AppCompatActivity {
                 try {
                     imageUri=data.getData();
                     Bitmap bmp=MediaStore.Images.Media.getBitmap(this.getContentResolver(),imageUri);
-                    ivprofil.setImageBitmap(bmp);
+                    ivhasilprofil.setImageBitmap(bmp);
                 }
                 catch (IOException e){
                     Toast.makeText(this, "Can't load Image", Toast.LENGTH_SHORT).show();

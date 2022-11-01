@@ -49,8 +49,9 @@
             app:cardCornerRadius="40dp"
             android:backgroundTint="@color/white">
 
-            <TextView
-                android:layout_margin="10dp"
+            <EditText
+                android:id="@+id/reusername"
+                android:layout_margin="5dp"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Masukkan username Anda"
@@ -76,8 +77,9 @@
             app:cardCornerRadius="40dp"
             android:backgroundTint="@color/white">
 
-            <TextView
-                android:layout_margin="10dp"
+            <EditText
+                android:id="@+id/reemail"
+                android:layout_margin="5dp"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Masukkan email Anda"
@@ -103,8 +105,9 @@
             app:cardCornerRadius="40dp"
             android:backgroundTint="@color/white">
 
-            <TextView
-                android:layout_margin="10dp"
+            <EditText
+                android:id="@+id/repassword"
+                android:layout_margin="5dp"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Masukkan password Anda"
@@ -130,8 +133,9 @@
             app:cardCornerRadius="40dp"
             android:backgroundTint="@color/white">
 
-            <TextView
-                android:layout_margin="10dp"
+            <EditText
+                android:id="@+id/rekonpassword"
+                android:layout_margin="5dp"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Masukkan lagi password Anda"
@@ -143,6 +147,7 @@
     </LinearLayout>
 
     <androidx.cardview.widget.CardView
+        android:id="@+id/buttonregister"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         app:cardCornerRadius="32dp"
@@ -168,6 +173,7 @@
     </androidx.cardview.widget.CardView>
 
     <TextView
+        android:id="@+id/buttonsudah"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Sudah punya akun?"
